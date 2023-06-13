@@ -1,3 +1,6 @@
+#perform DESeq2 for differential gene expression analysis
+
+
 library(tidyverse) #view command active
 
 counts_ <- read.csv("/Users/khadija/Desktop/old/cb/count_bc.csv", sep=";",row.names = 1, stringsAsFactors=FALSE)
@@ -44,7 +47,7 @@ de = function(counts, colData){
 De_ <- de(counts_, coldata_)
 
 
-##### USE IF FILTERING IS REQUIRED 
+#USE IF FILTERING IS REQUIRED ON PCA plot
 de_ <- function(counts, colData){
   
   library(DESeq2)
@@ -86,11 +89,12 @@ de_ <- function(counts, colData){
 }
 
 new_data <- de_(counts_, coldata_)
-view(new_data[[1]])
-view(new_data[[2]])
+
+#Save if required
 write.csv(new_data[[1]],'/Users/khadija/Desktop/c3/new.csv', row.names = TRUE)
 write.csv(new_data[[2]],'/Users/khadija/Desktop/c3/new_col.csv', row.names = TRUE)
 
+#DESeq on filtered data
 de_seq <- function(stage, opt){
   
   design_matrx <- stage[[2]]
@@ -134,7 +138,7 @@ PDAC_cancer <- function(dds){
   
   resNew <- rbind(up, dwn)
   
-  write.csv(up,'/Users/khadija/Desktop/graph/d3_type/up.csv', row.names = TRUE)
+  write.csv(up,'/Users/khadija/Desktop/graph/d3_type/up.csv', row.names = TRUE) 
   write.csv(dwn,'/Users/khadija/Desktop/graph/d3_type/down.csv', row.names = TRUE)
   
   #return(list(resNew))
@@ -145,11 +149,6 @@ PDAC_cancer <- function(dds){
 P = PDAC_cancer(DE_de)
 view(P)
 
-up = as.data.frame(P[[2]]) #upregulated genes
-down = as.data.frame(P[[3]]) #dwnregulated genes
-
-write.csv(up,'/Users/khadija/Desktop/d1/d3_subtypes/up.csv', row.names = TRUE)
-write.csv(dwn,'/Users/khadija/Desktop/d1/d3_subtypes/dwn.csv', row.names = TRUE)
 
 PDAC_C <- function(dds){
   
@@ -164,9 +163,9 @@ PDAC_C <- function(dds){
   resNew <- rbind(up, dwn)
   
   #return(list(resNew))
-  #write.csv(up,'/Users/khadija/Desktop/c3/wg/classical/up.csv', row.names = TRUE)
-  #write.csv(dwn,'/Users/khadija/Desktop/c3/wg/classical/dwn.csv', row.names = TRUE)
-  view(up)
+  write.csv(up,'/Users/khadija/Desktop/c3/wg/classical/up.csv', row.names = TRUE)
+  write.csv(dwn,'/Users/khadija/Desktop/c3/wg/classical/dwn.csv', row.names = TRUE)
+ 
   return(list(resNew, up, dwn))
 
 }
