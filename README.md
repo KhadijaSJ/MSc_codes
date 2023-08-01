@@ -15,9 +15,14 @@ Project used the following languages:
 * R studio
 	
 ## Setup
-To run this project, install on terminal:
+To run this project, the following packages will be used:
 
-```
-$ brew install python #require homebrew
+* FastQC
+* Trimmomatic
+* HISAT2
+* HTSeq
+* DESeq2
+* ClusterProfiler
+* Random forest classifier
 
-```
+
