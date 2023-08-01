@@ -16,12 +16,12 @@ Project used the following languages:
 	
 ## Setup
 To run this project, the following packages will be used:
-# Python
+### Python
 * FastQC
 * Trimmomatic
 * HISAT2
 * HTSeq
-# R
+### R
 * DESeq2
 * ClusterProfiler
 * Random forest classifier
