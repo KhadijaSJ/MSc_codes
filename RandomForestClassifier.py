@@ -49,7 +49,7 @@ f1_score(y_test, y_predicted) #F1-Score
 precision_score(y_test, y_predicted) #Precision Score
 
 #test the model on an independent count matrix
-#Prepare the dataframe as the intail steps, however, do not split the frame.
+#Prepare the dataframe as the initail steps, however, do not split the frame.
 
 PDAC_D1 = read_dataframe('/Users/khadija/Desktop/dataset_1/ML/D1_updwn/d1_tumour.csv', 1)#assign pdac to 1, this is the phenotype
 Normal_D1 = read_dataframe('/Users/khadija/Desktop/dataset_1/ML/D1_updwn/d1_normal.csv', 0) #assign normal to 0
