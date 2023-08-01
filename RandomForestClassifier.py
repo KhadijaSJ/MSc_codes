@@ -17,7 +17,6 @@ def read_dataframe(file, value):
     return(df) 
 
 PDAC = read_dataframe('/Users/khadija/Desktop/ML/biomarker_data/tumour_biomarker.csv', 1)#assign pdac to 1, this is the phenotype
-
 Normal = read_dataframe('/Users/khadija/Desktop/ML/biomarker_data/normal_biomarker.csv', 0) #assign normal to 0
 
 def merge(Normal,PDAC):
