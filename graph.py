@@ -1,4 +1,4 @@
-#Displays the up and down regulated differentially expressed genes (DEGS) per dataset as a bar plot.
+#Displays the up and down regulated differentially expressed genes (DEGS) per dataset as a bar plot. 
 
 d1_up = 4194 
 d1_down = 2723 
@@ -11,6 +11,8 @@ d3_stage_down = 717
 
 d3_subtype_up = 432
 d3_subtype_down = 571
+#can use variable names or direcly input the values below.
+
 
 import pandas as pd
 from matplotlib import pyplot as plt
