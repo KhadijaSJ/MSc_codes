@@ -1,5 +1,5 @@
 # Random Forest Classifier is a machine learning approach that is used to predict the phenotype (diease or normal) based on the count values/expression levels.
-# One dataset is required to test and train the model and an external independent dataset is required to test the model.
+# One dataset is required to test and train the model and an external independent dataset is required to test the model. Both datasets need to have the same genes.
 
 from sklearn.metrics import recall_score, accuracy_score, f1_score, precision_score
 from sklearn.ensemble import RandomForestClassifier
